@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b13d259285de02e14ea601d1f9e3703",
+    "content-hash": "0f5a51d31116ff8ddec3511717574455",
     "packages": [
         {
             "name": "amphp/amp",
@@ -993,12 +993,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dayeBill/bill-core.git",
-                "reference": "a399fdebd9451d2dd5cf4471d0407c53c725983f"
+                "reference": "7f7b69f742e34cafd4687379d5b26bcaac56caa1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dayeBill/bill-core/zipball/a399fdebd9451d2dd5cf4471d0407c53c725983f",
-                "reference": "a399fdebd9451d2dd5cf4471d0407c53c725983f",
+                "url": "https://api.github.com/repos/dayeBill/bill-core/zipball/7f7b69f742e34cafd4687379d5b26bcaac56caa1",
+                "reference": "7f7b69f742e34cafd4687379d5b26bcaac56caa1",
                 "shasum": ""
             },
             "require": {
@@ -1015,6 +1015,12 @@
             "default-branch": true,
             "type": "library",
             "extra": {
+                "laravel": {
+                    "providers": [
+                        "DayeBill\\BillCore\\PackageServiceProvider",
+                        "DayeBill\\BillCore\\Application\\ApplicationServiceProvider"
+                    ]
+                },
                 "branch-alias": {
                     "dev-main": "1.0.x-dev",
                     "dev-master": "1.0.x-dev"
@@ -1037,7 +1043,7 @@
                 "issues": "https://github.com/dayeBill/bill-core/issues",
                 "source": "https://github.com/dayeBill/bill-core/tree/master"
             },
-            "time": "2025-01-22T15:09:27+00:00"
+            "time": "2025-01-23T08:14:44+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -3603,6 +3609,150 @@
             "time": "2024-11-21T10:39:51+00:00"
         },
         {
+            "name": "overtrue/laravel-socialite",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/laravel-socialite.git",
+                "reference": "46f0ef3c5f8e8b5ad4cc8bbcec3cb36646d81146"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/overtrue/laravel-socialite/zipball/46f0ef3c5f8e8b5ad4cc8bbcec3cb36646d81146",
+                "reference": "46f0ef3c5f8e8b5ad4cc8bbcec3cb36646d81146",
+                "shasum": ""
+            },
+            "require": {
+                "overtrue/socialite": "^4.0"
+            },
+            "require-dev": {
+                "brainmaestro/composer-git-hooks": "dev-master",
+                "friendsofphp/php-cs-fixer": "^3.3",
+                "laravel/pint": "*",
+                "mockery/mockery": "^1.4",
+                "phpunit/phpunit": "^10.0|^11.0"
+            },
+            "type": "library",
+            "extra": {
+                "hooks": {
+                    "pre-push": [
+                        "composer test",
+                        "composer check-style"
+                    ],
+                    "pre-commit": [
+                        "composer test",
+                        "composer check-style"
+                    ]
+                },
+                "laravel": {
+                    "aliases": {
+                        "Socialite": "Overtrue\\LaravelSocialite\\Socialite"
+                    },
+                    "providers": [
+                        "Overtrue\\LaravelSocialite\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Overtrue\\LaravelSocialite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "overtrue",
+                    "email": "anzhengchao@gmail.com"
+                }
+            ],
+            "description": "Social OAuth authentication for Laravel 5.",
+            "support": {
+                "issues": "https://github.com/overtrue/laravel-socialite/issues",
+                "source": "https://github.com/overtrue/laravel-socialite/tree/4.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/overtrue",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-03-13T05:05:46+00:00"
+        },
+        {
+            "name": "overtrue/socialite",
+            "version": "4.11.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/socialite.git",
+                "reference": "83dd537a88b30cd9204ee2c46a5b2e181bc1fa66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/overtrue/socialite/zipball/83dd537a88b30cd9204ee2c46a5b2e181bc1fa66",
+                "reference": "83dd537a88b30cd9204ee2c46a5b2e181bc1fa66",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "guzzlehttp/guzzle": "^7.0",
+                "php": ">=8.0.2"
+            },
+            "require-dev": {
+                "jetbrains/phpstorm-attributes": "^1.0",
+                "laravel/pint": "^1.2",
+                "mockery/mockery": "^1.3",
+                "phpstan/phpstan": "^1.7",
+                "phpunit/phpunit": "^11.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Contracts/FactoryInterface.php",
+                    "src/Contracts/UserInterface.php",
+                    "src/Contracts/ProviderInterface.php"
+                ],
+                "psr-4": {
+                    "Overtrue\\Socialite\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "overtrue",
+                    "email": "anzhengchao@gmail.com"
+                }
+            ],
+            "description": "A collection of OAuth 2 packages.",
+            "keywords": [
+                "Feishu",
+                "login",
+                "oauth",
+                "qcloud",
+                "qq",
+                "social",
+                "wechat",
+                "weibo"
+            ],
+            "support": {
+                "issues": "https://github.com/overtrue/socialite/issues",
+                "source": "https://github.com/overtrue/socialite/tree/4.11.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/overtrue",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-10-08T16:23:14+00:00"
+        },
+        {
             "name": "phpdocumentor/reflection",
             "version": "6.1.0",
             "source": {
@@ -4683,6 +4833,102 @@
             "time": "2024-04-27T21:32:50+00:00"
         },
         {
+            "name": "red-jasmine/socialite",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./framework/packages/socialite",
+                "reference": "debdc0b13a97067cba8a4b62eb6f294358d98580"
+            },
+            "require": {
+                "illuminate/contracts": "^10.0||^11.0",
+                "overtrue/laravel-socialite": "^4.1",
+                "php": "^8.3",
+                "spatie/laravel-package-tools": "^1.16"
+            },
+            "require-dev": {
+                "larastan/larastan": "^2.9",
+                "laravel/pint": "^1.14",
+                "nunomaduro/collision": "^8.1.1||^7.10.0",
+                "orchestra/testbench": "^9.0.0||^8.22.0",
+                "pestphp/pest": "^3.0",
+                "pestphp/pest-plugin-arch": "^3.0",
+                "pestphp/pest-plugin-laravel": "^3.0",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "phpstan/phpstan-phpunit": "^1.3",
+                "spatie/laravel-ray": "^1.35"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "RedJasmine\\Socialite\\SocialitePackageServiceProvider",
+                        "RedJasmine\\Socialite\\Application\\SocialiteApplicationServiceProvider"
+                    ],
+                    "aliases": {
+                        "Socialite": "RedJasmine\\Socialite\\Facades\\Socialite"
+                    }
+                },
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev",
+                    "dev-main": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RedJasmine\\Socialite\\": "src/",
+                    "RedJasmine\\Socialite\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "RedJasmine\\Socialite\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "@composer run prepare"
+                ],
+                "prepare": [
+                    "@php vendor/bin/testbench package:discover --ansi"
+                ],
+                "analyse": [
+                    "vendor/bin/phpstan analyse"
+                ],
+                "test": [
+                    "vendor/bin/pest"
+                ],
+                "test-coverage": [
+                    "vendor/bin/pest --coverage"
+                ],
+                "format": [
+                    "vendor/bin/pint"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Liushoukun",
+                    "email": "liushoukun66@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is my package socialite",
+            "homepage": "https://github.com/redjasmine/socialite",
+            "keywords": [
+                "RedJasmine",
+                "laravel",
+                "socialite"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "red-jasmine/support",
             "version": "dev-master",
             "source": {
@@ -4747,6 +4993,99 @@
                 "source": "https://github.com/red-jasmine/support/tree/master"
             },
             "time": "2025-01-17T14:26:42+00:00"
+        },
+        {
+            "name": "red-jasmine/user",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./framework/packages/user",
+                "reference": "2d464b4cd814bad337e96a29dd33d0d27372a496"
+            },
+            "require": {
+                "illuminate/contracts": "^10.0||^11.0",
+                "php": "^8.3",
+                "red-jasmine/socialite": "^1.0@dev",
+                "spatie/laravel-package-tools": "^1.16"
+            },
+            "require-dev": {
+                "larastan/larastan": "^2.9",
+                "laravel/pint": "^1.14",
+                "nunomaduro/collision": "^8.1.1||^7.10.0",
+                "orchestra/testbench": "^9.0.0||^8.22.0",
+                "pestphp/pest": "^3.0",
+                "pestphp/pest-plugin-arch": "^3.0",
+                "pestphp/pest-plugin-laravel": "^3.0",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
+                "phpstan/phpstan-phpunit": "^1.3",
+                "spatie/laravel-ray": "^1.35"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "RedJasmine\\User\\UserPackageServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev",
+                    "dev-main": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RedJasmine\\User\\": "src/",
+                    "RedJasmine\\User\\Database\\Factories\\": "database/factories/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "RedJasmine\\User\\Tests\\": "tests/",
+                    "Workbench\\App\\": "workbench/app/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "@composer run prepare"
+                ],
+                "prepare": [
+                    "@php vendor/bin/testbench package:discover --ansi"
+                ],
+                "analyse": [
+                    "vendor/bin/phpstan analyse"
+                ],
+                "test": [
+                    "vendor/bin/pest"
+                ],
+                "test-coverage": [
+                    "vendor/bin/pest --coverage"
+                ],
+                "format": [
+                    "vendor/bin/pint"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "liushoukun",
+                    "email": "liushoukun66@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is my package user",
+            "homepage": "https://github.com/red-jasmine/user",
+            "keywords": [
+                "laravel",
+                "red-jasmine",
+                "user"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "revolt/event-loop",
@@ -9895,12 +10234,15 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "daye-bill/bill-core": 20,
+        "red-jasmine/user": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
