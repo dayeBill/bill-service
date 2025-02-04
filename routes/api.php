@@ -5,13 +5,9 @@ use Illuminate\Support\Facades\Route;
 use RedJasmine\User\UI\Http\User\UserRoute;
 
 Route::group([
-    'prefix' => 'login',
+    'prefix' => 'auth',
 ], function () {
-
-
     UserRoute::api();
-
-
 });
 
 Route::group([
