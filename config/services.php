@@ -34,5 +34,16 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'socialite'=>[
+
+        'wechat' => [
+            'provider'      => 'wechat',  // <-- provider name
+            'client_id'     => env('WECHAT_CLIENT_ID'),
+            'client_secret' => env('WECHAT_CLIENT_SECRET'),
+
+        ],
+
+
+    ],
 
 ];
