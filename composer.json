@@ -6,11 +6,11 @@
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
-        "daye-bill/bill-core": "^1.0@dev",
+        "php": "^8.3",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
-        "red-jasmine/user": "^1.0@dev"
+        "red-jasmine/user": "1.0.x-dev",
+        "daye-bill/bill-core": "1.0.x-dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -74,6 +74,13 @@
         "0": {
             "type": "path",
             "url": "./framework/packages/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        "1": {
+            "type": "path",
+            "url": "../bill-core",
             "options": {
                 "symlink": true
             }

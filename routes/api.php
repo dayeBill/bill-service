@@ -4,15 +4,11 @@ use DayeBill\BillCore\UI\Http\BillRoute;
 use Illuminate\Support\Facades\Route;
 use RedJasmine\User\UI\Http\User\UserRoute;
 
-Route::group([
-    'prefix' => 'auth',
-], function () {
-    UserRoute::api();
-});
+UserRoute::api();
 
 Route::group([
     'prefix'     => 'bill',
-    'middleware' => ['auth']
+    'middleware' => ['auth:api']
 ], function () {
 
     BillRoute::route();
