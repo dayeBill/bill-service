@@ -71,19 +71,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "repositories": {
-        "0": {
-            "type": "path",
-            "url": "./framework/packages/*",
-            "options": {
-                "symlink": true
-            }
-        },
-        "1": {
-            "type": "path",
-            "url": "../bill-core",
-            "options": {
-                "symlink": true
-            }
-        }
+
     }
 }
