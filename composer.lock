@@ -5057,12 +5057,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/red-jasmine/support.git",
-                "reference": "3bfe1bf6d64131716c479043802a508de2d49f84"
+                "reference": "f6251df159cb81f64ff63765374da7e20f46a955"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/red-jasmine/support/zipball/3bfe1bf6d64131716c479043802a508de2d49f84",
-                "reference": "3bfe1bf6d64131716c479043802a508de2d49f84",
+                "url": "https://api.github.com/repos/red-jasmine/support/zipball/f6251df159cb81f64ff63765374da7e20f46a955",
+                "reference": "f6251df159cb81f64ff63765374da7e20f46a955",
                 "shasum": ""
             },
             "require": {
@@ -5113,7 +5113,7 @@
                 "issues": "https://github.com/red-jasmine/support/issues",
                 "source": "https://github.com/red-jasmine/support/tree/master"
             },
-            "time": "2025-02-08T17:17:37+00:00"
+            "time": "2025-02-09T15:08:20+00:00"
         },
         {
             "name": "red-jasmine/user",
