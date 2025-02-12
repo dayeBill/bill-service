@@ -27,8 +27,8 @@ RUN composer dump-autoload -o \
 ###########################################################################
 
 
-COPY /docker/supervisord/supervisord.fpm.conf /etc/supervisord.conf
-COPY /docker/supervisord/conf/*  /etc/supervisord/
+#COPY /docker/supervisord/supervisord.fpm.conf /etc/supervisord.conf
+#COPY /docker/supervisord/conf/*  /etc/supervisord/
 
 
 ###########################################################################
