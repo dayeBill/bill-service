@@ -1,6 +1,6 @@
 FROM liushoukun/php-fpm-nginx:8.3.16
 
-ARG APP_CODE_PATH=../
+ARG APP_CODE_PATH=./
 
 # install application dependencies
 WORKDIR /var/www/app
