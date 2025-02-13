@@ -30,8 +30,8 @@ RUN composer dump-autoload -o \
 ###########################################################################
 
 
-#COPY /docker/supervisord/supervisord.conf /etc/supervisord.conf
-#COPY /docker/supervisord/conf/*  /etc/supervisord/
+COPY /docker/supervisord/supervisord.conf /etc/supervisord.conf
+COPY /docker/supervisord/conf/*  /etc/supervisord/
 
 
 ###########################################################################
