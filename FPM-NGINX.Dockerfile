@@ -1,4 +1,4 @@
-FROM registry.cn-shenzhen.aliyuncs.com/xlankeji/liushoukun/php-fpm-nginx:8.3.16
+FROM liushoukun/php-fpm-nginx:8.3.16
 
 ARG APP_CODE_PATH=./
 
