@@ -7,11 +7,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
+        "daye-bill/bill-core": "1.0.x-dev",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
         "red-jasmine/user": "1.0.x-dev",
         "red-jasmine/vip": "1.0.x-dev",
-        "daye-bill/bill-core": "1.0.x-dev"
+        "red-jasmine/filament-product": "1.0.x-dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -37,7 +38,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -71,7 +73,27 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": {
-
-    }
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../red-jasmine/framework/packages/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../bill-core",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "../../liushoukun/*",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
 }
