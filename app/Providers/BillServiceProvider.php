@@ -15,9 +15,9 @@ class BillServiceProvider extends ServiceProvider
 
     public function boot() : void
     {
-        Hook::register('bill-core.application.bill.command.create', VipBillCreateHook::class);
-        Hook::register('bill-core.application.event.command.create', VipBillCreateHook::class);
-        Hook::register('bill-core.application.contact.command.create', VipBillCreateHook::class);
+        Hook::register('bill-core.application.bill.create', VipBillCreateHook::class);
+        Hook::register('bill-core.application.event.create', VipBillCreateHook::class);
+        Hook::register('bill-core.application.contact.create', VipBillCreateHook::class);
 
         //
     }
