@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.9",
         "red-jasmine/user": "1.0.x-dev",
         "red-jasmine/vip": "1.0.x-dev",
+        "red-jasmine/region": "1.0.x-dev",
         "red-jasmine/filament-product": "1.0.x-dev"
     },
     "require-dev": {
